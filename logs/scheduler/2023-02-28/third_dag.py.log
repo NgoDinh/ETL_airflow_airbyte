@@ -1,0 +1,52 @@
+[2023-02-28T17:11:16.726+0000] {processor.py:153} INFO - Started process (PID=354) to work on /opt/airflow/dags/third_dag.py
+[2023-02-28T17:11:16.728+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/third_dag.py for tasks to queue
+[2023-02-28T17:11:16.730+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.730+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/third_dag.py
+[2023-02-28T17:11:16.765+0000] {processor.py:753} INFO - DAG(s) dict_keys(['tutorial_2nd_trial']) retrieved from /opt/airflow/dags/third_dag.py
+[2023-02-28T17:11:16.887+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.887+0000] {manager.py:414} ERROR - Add View Menu Error: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "serialized_dag_pkey"
+DETAIL:  Key (dag_id)=(tutorial_2nd_trial) already exists.
+
+[SQL: INSERT INTO serialized_dag (dag_id, fileloc, fileloc_hash, data, data_compressed, last_updated, dag_hash, processor_subdir) VALUES (%(dag_id)s, %(fileloc)s, %(fileloc_hash)s, %(data)s, %(data_compressed)s, %(last_updated)s, %(dag_hash)s, %(processor_subdir)s)]
+[parameters: {'dag_id': 'tutorial_2nd_trial', 'fileloc': '/opt/airflow/dags/third_dag.py', 'fileloc_hash': 60401127426587742, 'data': '{"__version": 1, "dag": {"edge_info": {}, "dataset_triggers": [], "default_args": {"__var": {"owner": "airflow", "depends_on_past": false, "start_dat ... (3054 characters truncated) ...  }}\\"\\n    echo \\"{{ macros.ds_add(ds, 7)}}\\"\\n    echo \\"{{ params.my_param }}\\"\\n{% endfor %}\\n"}], "dag_dependencies": [], "params": {}}}', 'data_compressed': None, 'last_updated': datetime.datetime(2023, 2, 28, 17, 11, 16, 780504, tzinfo=Timezone('UTC')), 'dag_hash': 'f2f221a2f83f8d2b532d17858c91efa0', 'processor_subdir': None}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2023-02-28T17:11:16.893+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.893+0000] {manager.py:504} INFO - Created Permission View: can delete on None
+[2023-02-28T17:11:16.901+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.901+0000] {manager.py:507} ERROR - Creation of Permission View Error: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ab_permission_view_permission_id_view_menu_id_uq"
+DETAIL:  Key (permission_id, view_menu_id)=(1, 97) already exists.
+
+[SQL: INSERT INTO ab_permission_view (permission_id, view_menu_id) VALUES (%(permission_id)s, %(view_menu_id)s) RETURNING ab_permission_view.id]
+[parameters: {'permission_id': 1, 'view_menu_id': 97}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2023-02-28T17:11:16.907+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.907+0000] {manager.py:507} ERROR - Creation of Permission View Error: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ab_permission_view_permission_id_view_menu_id_uq"
+DETAIL:  Key (permission_id, view_menu_id)=(2, 97) already exists.
+
+[SQL: INSERT INTO ab_permission_view (permission_id, view_menu_id) VALUES (%(permission_id)s, %(view_menu_id)s) RETURNING ab_permission_view.id]
+[parameters: {'permission_id': 2, 'view_menu_id': 97}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2023-02-28T17:11:16.908+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.908+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-02-28T17:11:16.918+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.918+0000] {dag.py:2711} INFO - Creating ORM DAG for tutorial_2nd_trial
+[2023-02-28T17:11:16.926+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.926+0000] {dag.py:3441} INFO - Setting next_dagrun for tutorial_2nd_trial to 2023-02-26T00:00:00+00:00, run_after=2023-02-27T00:00:00+00:00
+[2023-02-28T17:11:16.940+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/third_dag.py took 0.217 seconds
+[2023-02-28T17:11:29.115+0000] {processor.py:153} INFO - Started process (PID=369) to work on /opt/airflow/dags/third_dag.py
+[2023-02-28T17:11:29.117+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/third_dag.py for tasks to queue
+[2023-02-28T17:11:29.126+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:29.126+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/third_dag.py
+[2023-02-28T17:11:29.158+0000] {processor.py:753} INFO - DAG(s) dict_keys(['tutorial_3th_trial']) retrieved from /opt/airflow/dags/third_dag.py
+[2023-02-28T17:11:29.228+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:29.228+0000] {manager.py:504} INFO - Created Permission View: can delete on DAG:tutorial_3th_trial
+[2023-02-28T17:11:29.235+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:29.235+0000] {manager.py:504} INFO - Created Permission View: can edit on DAG:tutorial_3th_trial
+[2023-02-28T17:11:29.241+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:29.241+0000] {manager.py:504} INFO - Created Permission View: can read on DAG:tutorial_3th_trial
+[2023-02-28T17:11:29.242+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:29.242+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-02-28T17:11:29.250+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:29.250+0000] {dag.py:2711} INFO - Creating ORM DAG for tutorial_3th_trial
+[2023-02-28T17:11:29.257+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:29.257+0000] {dag.py:3441} INFO - Setting next_dagrun for tutorial_3th_trial to 2023-02-26T00:00:00+00:00, run_after=2023-02-27T00:00:00+00:00
+[2023-02-28T17:11:29.274+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/third_dag.py took 0.164 seconds
+[2023-02-28T17:11:35.235+0000] {processor.py:153} INFO - Started process (PID=382) to work on /opt/airflow/dags/third_dag.py
+[2023-02-28T17:11:35.236+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/third_dag.py for tasks to queue
+[2023-02-28T17:11:35.238+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:35.238+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/third_dag.py
+[2023-02-28T17:11:35.273+0000] {processor.py:753} INFO - DAG(s) dict_keys(['tutorial_3th_trial']) retrieved from /opt/airflow/dags/third_dag.py
+[2023-02-28T17:11:35.287+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:35.287+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-02-28T17:11:35.304+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:35.304+0000] {dag.py:3441} INFO - Setting next_dagrun for tutorial_3th_trial to 2023-02-26T00:00:00+00:00, run_after=2023-02-27T00:00:00+00:00
+[2023-02-28T17:11:35.318+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/third_dag.py took 0.087 seconds
+[2023-02-28T17:12:05.647+0000] {processor.py:153} INFO - Started process (PID=420) to work on /opt/airflow/dags/third_dag.py
+[2023-02-28T17:12:05.650+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/third_dag.py for tasks to queue
+[2023-02-28T17:12:05.652+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:12:05.652+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/third_dag.py
+[2023-02-28T17:12:05.675+0000] {processor.py:753} INFO - DAG(s) dict_keys(['tutorial_3th_trial']) retrieved from /opt/airflow/dags/third_dag.py
+[2023-02-28T17:12:05.697+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:12:05.697+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-02-28T17:12:05.714+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:12:05.714+0000] {dag.py:3441} INFO - Setting next_dagrun for tutorial_3th_trial to 2023-02-26T00:00:00+00:00, run_after=2023-02-27T00:00:00+00:00
+[2023-02-28T17:12:05.728+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/third_dag.py took 0.084 seconds

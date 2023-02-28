@@ -1,0 +1,100 @@
+[2023-02-28T17:11:16.729+0000] {processor.py:153} INFO - Started process (PID=355) to work on /opt/airflow/dags/trial/second_dag.py
+[2023-02-28T17:11:16.731+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/trial/second_dag.py for tasks to queue
+[2023-02-28T17:11:16.732+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.732+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/trial/second_dag.py
+[2023-02-28T17:11:16.765+0000] {processor.py:753} INFO - DAG(s) dict_keys(['tutorial_2nd_trial']) retrieved from /opt/airflow/dags/trial/second_dag.py
+[2023-02-28T17:11:16.891+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.891+0000] {manager.py:504} INFO - Created Permission View: can delete on DAG:tutorial_2nd_trial
+[2023-02-28T17:11:16.899+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.899+0000] {manager.py:504} INFO - Created Permission View: can edit on DAG:tutorial_2nd_trial
+[2023-02-28T17:11:16.905+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.905+0000] {manager.py:504} INFO - Created Permission View: can read on DAG:tutorial_2nd_trial
+[2023-02-28T17:11:16.906+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.906+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-02-28T17:11:16.917+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.917+0000] {dag.py:2711} INFO - Creating ORM DAG for tutorial_2nd_trial
+[2023-02-28T17:11:16.925+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:16.925+0000] {dag.py:3441} INFO - Setting next_dagrun for tutorial_2nd_trial to 2023-02-26T00:00:00+00:00, run_after=2023-02-27T00:00:00+00:00
+[2023-02-28T17:11:17.214+0000] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py:639 RemovedInAirflow3Warning: DAG.full_filepath is deprecated in favour of fileloc
+[2023-02-28T17:11:17.218+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:17.216+0000] {dagbag.py:639} ERROR - Failed to write serialized DAG: /opt/airflow/dags/trial/second_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 631, in _serialize_dag_capturing_errors
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/serialized_dag.py", line 149, in write_dag
+    (timezone.utcnow() - timedelta(seconds=min_update_interval)) < cls.last_updated,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2893, in scalar
+    ret = self.one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2870, in one
+    return self._iter().one()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1713, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1553, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 721, in _connection_for_bind
+    self._assert_active()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 608, in _assert_active
+    code="7s2a",
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "dag_pkey"
+DETAIL:  Key (dag_id)=(tutorial_2nd_trial) already exists.
+
+[SQL: INSERT INTO dag (dag_id, root_dag_id, is_paused, is_subdag, is_active, last_parsed_time, last_pickled, last_expired, scheduler_lock, pickle_id, fileloc, processor_subdir, owners, description, default_view, schedule_interval, timetable_description, max_active_tasks, max_active_runs, has_task_concurrency_limits, has_import_errors, next_dagrun, next_dagrun_data_interval_start, next_dagrun_data_interval_end, next_dagrun_create_after) VALUES (%(dag_id)s, %(root_dag_id)s, %(is_paused)s, %(is_subdag)s, %(is_active)s, %(last_parsed_time)s, %(last_pickled)s, %(last_expired)s, %(scheduler_lock)s, %(pickle_id)s, %(fileloc)s, %(processor_subdir)s, %(owners)s, %(description)s, %(default_view)s, %(schedule_interval)s, %(timetable_description)s, %(max_active_tasks)s, %(max_active_runs)s, %(has_task_concurrency_limits)s, %(has_import_errors)s, %(next_dagrun)s, %(next_dagrun_data_interval_start)s, %(next_dagrun_data_interval_end)s, %(next_dagrun_create_after)s)]
+[parameters: {'dag_id': 'tutorial_2nd_trial', 'root_dag_id': None, 'is_paused': True, 'is_subdag': False, 'is_active': True, 'last_parsed_time': datetime.datetime(2023, 2, 28, 17, 11, 16, 925472, tzinfo=Timezone('UTC')), 'last_pickled': None, 'last_expired': None, 'scheduler_lock': None, 'pickle_id': None, 'fileloc': '/opt/airflow/dags/trial/second_dag.py', 'processor_subdir': '/opt/airflow/dags', 'owners': 'airflow', 'description': 'A simple tutorial DAG', 'default_view': 'grid', 'schedule_interval': '{"type": "timedelta", "attrs": {"days": 1, "seconds": 0, "microseconds": 0}}', 'timetable_description': '', 'max_active_tasks': 16, 'max_active_runs': 16, 'has_task_concurrency_limits': False, 'has_import_errors': False, 'next_dagrun': DateTime(2023, 2, 26, 0, 0, 0, tzinfo=Timezone('UTC')), 'next_dagrun_data_interval_start': DateTime(2023, 2, 26, 0, 0, 0, tzinfo=Timezone('UTC')), 'next_dagrun_data_interval_end': DateTime(2023, 2, 27, 0, 0, 0, tzinfo=Timezone('UTC')), 'next_dagrun_create_after': DateTime(2023, 2, 27, 0, 0, 0, tzinfo=Timezone('UTC'))}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+[2023-02-28T17:11:17.221+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:17.221+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-02-28T17:11:17.223+0000] {processor.py:178} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 174, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 158, in _handle_dag_file_processing
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 75, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 768, in process_file
+    dagbag.sync_to_db(processor_subdir=self._dag_directory, session=session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 645, in sync_to_db
+    for attempt in run_with_db_retries(logger=self.log):
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 384, in __iter__
+    do = self.iter(retry_state=retry_state)
+  File "/home/airflow/.local/lib/python3.7/site-packages/tenacity/__init__.py", line 351, in iter
+    return fut.result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 428, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 660, in sync_to_db
+    self.dags.values(), processor_subdir=processor_subdir, session=session
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py", line 2701, in bulk_write_to_db
+    orm_dags: list[DagModel] = with_row_locks(query, of=DagModel, session=session).all()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2773, in all
+    return self._iter().all()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1713, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1553, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 721, in _connection_for_bind
+    self._assert_active()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 608, in _assert_active
+    code="7s2a",
+sqlalchemy.exc.PendingRollbackError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "dag_pkey"
+DETAIL:  Key (dag_id)=(tutorial_2nd_trial) already exists.
+
+[SQL: INSERT INTO dag (dag_id, root_dag_id, is_paused, is_subdag, is_active, last_parsed_time, last_pickled, last_expired, scheduler_lock, pickle_id, fileloc, processor_subdir, owners, description, default_view, schedule_interval, timetable_description, max_active_tasks, max_active_runs, has_task_concurrency_limits, has_import_errors, next_dagrun, next_dagrun_data_interval_start, next_dagrun_data_interval_end, next_dagrun_create_after) VALUES (%(dag_id)s, %(root_dag_id)s, %(is_paused)s, %(is_subdag)s, %(is_active)s, %(last_parsed_time)s, %(last_pickled)s, %(last_expired)s, %(scheduler_lock)s, %(pickle_id)s, %(fileloc)s, %(processor_subdir)s, %(owners)s, %(description)s, %(default_view)s, %(schedule_interval)s, %(timetable_description)s, %(max_active_tasks)s, %(max_active_runs)s, %(has_task_concurrency_limits)s, %(has_import_errors)s, %(next_dagrun)s, %(next_dagrun_data_interval_start)s, %(next_dagrun_data_interval_end)s, %(next_dagrun_create_after)s)]
+[parameters: {'dag_id': 'tutorial_2nd_trial', 'root_dag_id': None, 'is_paused': True, 'is_subdag': False, 'is_active': True, 'last_parsed_time': datetime.datetime(2023, 2, 28, 17, 11, 16, 925472, tzinfo=Timezone('UTC')), 'last_pickled': None, 'last_expired': None, 'scheduler_lock': None, 'pickle_id': None, 'fileloc': '/opt/airflow/dags/trial/second_dag.py', 'processor_subdir': '/opt/airflow/dags', 'owners': 'airflow', 'description': 'A simple tutorial DAG', 'default_view': 'grid', 'schedule_interval': '{"type": "timedelta", "attrs": {"days": 1, "seconds": 0, "microseconds": 0}}', 'timetable_description': '', 'max_active_tasks': 16, 'max_active_runs': 16, 'has_task_concurrency_limits': False, 'has_import_errors': False, 'next_dagrun': DateTime(2023, 2, 26, 0, 0, 0, tzinfo=Timezone('UTC')), 'next_dagrun_data_interval_start': DateTime(2023, 2, 26, 0, 0, 0, tzinfo=Timezone('UTC')), 'next_dagrun_data_interval_end': DateTime(2023, 2, 27, 0, 0, 0, tzinfo=Timezone('UTC')), 'next_dagrun_create_after': DateTime(2023, 2, 27, 0, 0, 0, tzinfo=Timezone('UTC'))}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj) (Background on this error at: https://sqlalche.me/e/14/7s2a)
+[2023-02-28T17:11:47.345+0000] {processor.py:153} INFO - Started process (PID=395) to work on /opt/airflow/dags/trial/second_dag.py
+[2023-02-28T17:11:47.347+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/trial/second_dag.py for tasks to queue
+[2023-02-28T17:11:47.349+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:47.349+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/trial/second_dag.py
+[2023-02-28T17:11:47.366+0000] {processor.py:753} INFO - DAG(s) dict_keys(['tutorial_2nd_trial']) retrieved from /opt/airflow/dags/trial/second_dag.py
+[2023-02-28T17:11:47.393+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:47.393+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-02-28T17:11:47.409+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:11:47.409+0000] {dag.py:3441} INFO - Setting next_dagrun for tutorial_2nd_trial to 2023-02-26T00:00:00+00:00, run_after=2023-02-27T00:00:00+00:00
+[2023-02-28T17:11:47.423+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/trial/second_dag.py took 0.081 seconds
+[2023-02-28T17:12:17.776+0000] {processor.py:153} INFO - Started process (PID=433) to work on /opt/airflow/dags/trial/second_dag.py
+[2023-02-28T17:12:17.778+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/trial/second_dag.py for tasks to queue
+[2023-02-28T17:12:17.779+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:12:17.779+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/trial/second_dag.py
+[2023-02-28T17:12:17.797+0000] {processor.py:753} INFO - DAG(s) dict_keys(['tutorial_2nd_trial']) retrieved from /opt/airflow/dags/trial/second_dag.py
+[2023-02-28T17:12:17.819+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:12:17.819+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-02-28T17:12:17.837+0000] {logging_mixin.py:137} INFO - [2023-02-28T17:12:17.837+0000] {dag.py:3441} INFO - Setting next_dagrun for tutorial_2nd_trial to 2023-02-26T00:00:00+00:00, run_after=2023-02-27T00:00:00+00:00
+[2023-02-28T17:12:17.851+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/trial/second_dag.py took 0.077 seconds
