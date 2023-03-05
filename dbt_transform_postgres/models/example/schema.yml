@@ -2,8 +2,8 @@
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
+  - name: fact_user
+    description: "get all user"
     columns:
       - name: id
         description: "The primary key for this table"
@@ -11,11 +11,28 @@ models:
           - unique
           - not_null
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
+  - name: fact_user_potential
+    description: "get user with age is not null"
     columns:
       - name: id
         description: "The primary key for this table"
+        config:
+          store_failures: true
         tests:
           - unique
           - not_null
+          - dbt_utils.at_least_one
+      - name: name
+        description: "test name of user"
+        config:
+          store_failures: true
+        tests:
+          - unique
+          - not_null
+
+
+  # - name: fact_user_potential
+  #   columns:
+  #     - name: id
+  #       tests:
+          
