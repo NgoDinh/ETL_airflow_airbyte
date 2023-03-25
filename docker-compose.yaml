@@ -65,6 +65,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow//logs
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
+    - ${AIRFLOW_PROJ_DIR:-.}/dbt_transform_postgres:/opt/airflow/dbt_transform_postgres
     - /tmp/airbyte_local:/tmp/airbyte_local
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
@@ -133,6 +134,7 @@ services:
   airflow-worker:
     <<: *airflow-common
     command: celery worker
+    # user:
     healthcheck:
       test:
         - "CMD-SHELL"

@@ -52,3 +52,204 @@ Happy modeling!
 
 [0m07:25:52.450668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102f48340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104425e70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104427430>]}
 [0m07:25:52.450837 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-03-05 08:05:54.282864 | a1b52c48-cada-4469-8bfc-1dfecb3b8971 ==============================
+[0m08:05:54.282864 [info ] [MainThread]: Running with dbt=1.4.4
+[0m08:05:54.283958 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/vu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'dbt_transform_postgres', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m08:05:54.284070 [debug] [MainThread]: Tracking: tracking
+[0m08:05:54.296106 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084b1ab0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084b33a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084b2e90>]}
+[0m08:05:54.297695 [debug] [MainThread]: Starter project path: /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/dbt/include/starter_project
+[0m08:06:01.486904 [info ] [MainThread]: 
+Your new dbt project "dbt_transform_postgres" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m08:06:01.487261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ca6980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084b1de0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1084b3490>]}
+[0m08:06:01.487453 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-03-05 14:42:33.098980 | a443e539-5b35-4b0c-9eb1-1a4b344eeddb ==============================
+[0m14:42:33.098980 [info ] [MainThread]: Running with dbt=1.4.4
+[0m14:42:33.100534 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/vu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['./dbt_transform_postgres/fact_user'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m14:42:33.100660 [debug] [MainThread]: Tracking: tracking
+[0m14:42:33.111969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b39690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10850d930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10850c910>]}
+[0m14:42:33.113073 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10850d930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10850c910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10850d7b0>]}
+[0m14:42:33.113201 [debug] [MainThread]: Flushing usage events
+[0m14:42:34.575567 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found 1 package(s) specified in packages.yml, but only 0 package(s) installed in dbt_packages. Run "dbt deps" to install package dependencies.
+
+
+============================== 2023-03-05 14:42:47.433529 | 3742c82d-0021-455f-ae66-9a35e790499d ==============================
+[0m14:42:47.433529 [info ] [MainThread]: Running with dbt=1.4.4
+[0m14:42:47.434529 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/vu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'which': 'deps', 'rpc_method': 'deps', 'indirect_selection': 'eager'}
+[0m14:42:47.434630 [debug] [MainThread]: Tracking: tracking
+[0m14:42:47.445894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e4b550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e49bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e49cc0>]}
+[0m14:42:47.447539 [debug] [MainThread]: Set downloads directory='/var/folders/4p/4dsrcqhn1xzdbvntydthbzkc0000gn/T/dbt-downloads-h0561zsg'
+[0m14:42:47.447881 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m14:42:47.915045 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m14:42:47.915957 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m14:42:48.223023 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m14:42:48.233055 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m14:42:48.846470 [info ] [MainThread]:   Installed from version 1.0.0
+[0m14:42:48.846701 [info ] [MainThread]:   Up to date!
+[0m14:42:48.846889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '3742c82d-0021-455f-ae66-9a35e790499d', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e49c00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e4a8c0>]}
+[0m14:42:48.847360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e4af80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e4aef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e49cf0>]}
+[0m14:42:48.847503 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-03-05 14:43:11.948372 | 43db38f5-5c60-4fd4-90d7-e25ec233bd23 ==============================
+[0m14:43:11.948372 [info ] [MainThread]: Running with dbt=1.4.4
+[0m14:43:11.953397 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/vu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['./dbt_transform_postgres/fact_user'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m14:43:11.953655 [debug] [MainThread]: Tracking: tracking
+[0m14:43:11.966346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070e6440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ab90c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ab8550>]}
+[0m14:43:11.976360 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m14:43:11.976729 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:43:11.976893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '43db38f5-5c60-4fd4-90d7-e25ec233bd23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070f7a90>]}
+[0m14:43:12.361501 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_transform_postgres
+- models.dbt_transform_postgres.example
+- models.dbt_transform_postgres.views
+[0m14:43:12.364109 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '43db38f5-5c60-4fd4-90d7-e25ec233bd23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072d7fd0>]}
+[0m14:43:12.367201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '43db38f5-5c60-4fd4-90d7-e25ec233bd23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107141c00>]}
+[0m14:43:12.367350 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 401 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m14:43:12.367474 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '43db38f5-5c60-4fd4-90d7-e25ec233bd23', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ab8160>]}
+[0m14:43:12.367850 [warn ] [MainThread]: The selection criterion './dbt_transform_postgres/fact_user' does not match any nodes
+[0m14:43:12.368286 [info ] [MainThread]: 
+[0m14:43:12.368467 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m14:43:12.368606 [debug] [MainThread]: Command end result
+[0m14:43:12.371348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ab83a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107141c60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072d7d60>]}
+[0m14:43:12.371459 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-03-05 14:43:29.364841 | 31796cc1-c044-472f-8bf5-93cae5d27a57 ==============================
+[0m14:43:29.364841 [info ] [MainThread]: Running with dbt=1.4.4
+[0m14:43:29.366344 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/vu/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'select': ['dbt_transform_postgres/fact_user'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+[0m14:43:29.366453 [debug] [MainThread]: Tracking: tracking
+[0m14:43:29.376557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bb5690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bb7bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bb7b80>]}
+[0m14:43:29.385603 [debug] [MainThread]: checksum: 170d819e8a7f11e09c497566dd7f61e1355cb9fb514921503937b951cb4a2250, vars: {}, profile: None, target: None, version: 1.4.4
+[0m14:43:29.408223 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:43:29.408431 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:43:29.408686 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_transform_postgres.example
+- models.dbt_transform_postgres.views
+- models.dbt_transform_postgres
+[0m14:43:29.412115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '31796cc1-c044-472f-8bf5-93cae5d27a57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d9c0d0>]}
+[0m14:43:29.415902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '31796cc1-c044-472f-8bf5-93cae5d27a57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d69e70>]}
+[0m14:43:29.416093 [info ] [MainThread]: Found 0 models, 0 tests, 0 snapshots, 0 analyses, 401 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[0m14:43:29.416225 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '31796cc1-c044-472f-8bf5-93cae5d27a57', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d69cc0>]}
+[0m14:43:29.416615 [warn ] [MainThread]: The selection criterion 'dbt_transform_postgres/fact_user' does not match any nodes
+[0m14:43:29.417018 [info ] [MainThread]: 
+[0m14:43:29.417192 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m14:43:29.417327 [debug] [MainThread]: Command end result
+[0m14:43:29.420281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d69ab0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d69360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104d691b0>]}
+[0m14:43:29.420395 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-03-25 10:50:42.290483 | 33439c78-c3b9-40cd-8893-0543328b0020 ==============================
+[0m10:50:42.290483 [info ] [MainThread]: Running with dbt=1.4.5
+[0m10:50:42.293431 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/airflow/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m10:50:42.296013 [debug] [MainThread]: Tracking: tracking
+[0m10:50:42.304576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff93be16d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9414c350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff93b57b50>]}
+[0m10:50:42.307786 [info ] [MainThread]: Creating dbt configuration folder at /home/airflow/.dbt
+[0m10:51:13.671999 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff93b577d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff93a3c490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff93a3c510>]}
+[0m10:51:13.678034 [debug] [MainThread]: Flushing usage events
+[0m10:51:15.673712 [error] [MainThread]: Encountered an error:
+
+[0m10:51:15.695597 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/dbt/main.py", line 136, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dbt/main.py", line 206, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dbt/main.py", line 253, in run_from_args
+    results = task.run()
+  File "/home/airflow/.local/lib/python3.7/site-packages/dbt/task/init.py", line 286, in run
+    project_name = self.get_valid_project_name()
+  File "/home/airflow/.local/lib/python3.7/site-packages/dbt/task/init.py", line 243, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "/home/airflow/.local/lib/python3.7/site-packages/click/termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "/home/airflow/.local/lib/python3.7/site-packages/click/termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+
+
+============================== 2023-03-25 10:53:41.924560 | 75c447ad-e35e-450a-bde9-a9e8642e8b86 ==============================
+[0m10:53:41.924560 [info ] [MainThread]: Running with dbt=1.4.5
+[0m10:53:41.927206 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/airflow/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m10:53:41.930353 [debug] [MainThread]: Tracking: tracking
+[0m10:53:41.946428 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81743b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff816e9350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff816b5bd0>]}
+[0m10:53:58.209237 [debug] [MainThread]: Starter project path: /home/airflow/.local/lib/python3.7/site-packages/dbt/include/starter_project
+[0m10:54:07.841556 [info ] [MainThread]: Profile dbt_trial written to /home/airflow/.dbt/profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m10:54:07.844694 [info ] [MainThread]: 
+Your new dbt project "dbt_trial" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:54:07.848134 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80b64fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80b64790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80b64bd0>]}
+[0m10:54:07.851390 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-03-25 11:03:29.165039 | e74d0cda-e19c-40ae-8da2-bf3f859e1e01 ==============================
+[0m11:03:29.165039 [info ] [MainThread]: Running with dbt=1.4.5
+[0m11:03:29.167347 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/airflow/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'dbt_trial2', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m11:03:29.170255 [debug] [MainThread]: Tracking: tracking
+[0m11:03:29.178751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffacb44e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffacb3bf90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac99d390>]}
+[0m11:03:29.183542 [debug] [MainThread]: Starter project path: /home/airflow/.local/lib/python3.7/site-packages/dbt/include/starter_project
+[0m11:03:34.475119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffacab0e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffacab0f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffacab0c10>]}
+[0m11:03:34.483767 [debug] [MainThread]: Flushing usage events
+[0m11:03:36.385517 [error] [MainThread]: Encountered an error:
+
+[0m11:03:36.392549 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/dbt/main.py", line 136, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dbt/main.py", line 206, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/airflow/.local/lib/python3.7/site-packages/dbt/main.py", line 253, in run_from_args
+    results = task.run()
+  File "/home/airflow/.local/lib/python3.7/site-packages/dbt/task/init.py", line 304, in run
+    adapter = self.ask_for_adapter_choice()
+  File "/home/airflow/.local/lib/python3.7/site-packages/dbt/task/init.py", line 230, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "/home/airflow/.local/lib/python3.7/site-packages/click/termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "/home/airflow/.local/lib/python3.7/site-packages/click/termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+
+
+============================== 2023-03-25 11:04:55.240026 | 765a4bbc-15a6-4861-8f70-bfc12d367367 ==============================
+[0m11:04:55.240026 [info ] [MainThread]: Running with dbt=1.4.5
+[0m11:04:55.242447 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/airflow/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'dbt_trial3', 'skip_profile_setup': True, 'which': 'init', 'indirect_selection': 'eager'}
+[0m11:04:55.249459 [debug] [MainThread]: Tracking: tracking
+[0m11:04:55.258000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff822a1e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff820ec590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff820ec5d0>]}
+[0m11:04:55.261796 [debug] [MainThread]: Starter project path: /home/airflow/.local/lib/python3.7/site-packages/dbt/include/starter_project
+[0m11:04:55.266850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff822a1e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff820ec0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff820ec590>]}
+[0m11:04:55.269462 [debug] [MainThread]: Flushing usage events

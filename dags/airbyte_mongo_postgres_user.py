@@ -5,7 +5,7 @@ from airflow.providers.airbyte.sensors.airbyte import AirbyteJobSensor
 from airflow.sensors.filesystem import FileSensor
 import pendulum
 
-AIRBYTE_CONNECTION_ID = 'a17dee54-86ee-48f5-b652-efe16a55f37e'
+AIRBYTE_CONNECTION_ID = '9a421c27-810a-4b5e-9723-726f1a12984a'
 connection_name = 'airflow_airbyte_local'
 # RAW_PRODUCTS_FILE = '/tmp/airbyte_local/json_from_faker/_airbyte_raw_products.jsonl'
 # COPY_OF_RAW_PRODUCTS = '/tmp/airbyte_local/json_from_faker/moved_raw_products.jsonl'

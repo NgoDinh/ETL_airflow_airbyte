@@ -1,0 +1,40 @@
+[2023-03-25T14:46:08.234+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: transform_fact_user.model.dbt_transform_postgres.fact_user_potential manual__2023-03-25T14:45:54.460895+00:00 [queued]>
+[2023-03-25T14:46:08.256+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: transform_fact_user.model.dbt_transform_postgres.fact_user_potential manual__2023-03-25T14:45:54.460895+00:00 [queued]>
+[2023-03-25T14:46:08.261+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-25T14:46:08.263+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-03-25T14:46:08.265+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-25T14:46:08.301+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): model.dbt_transform_postgres.fact_user_potential> on 2023-03-25 14:45:54.460895+00:00
+[2023-03-25T14:46:08.311+0000] {standard_task_runner.py:55} INFO - Started process 119 to run task
+[2023-03-25T14:46:08.321+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'transform_fact_user', 'model.dbt_transform_postgres.fact_user_potential', 'manual__2023-03-25T14:45:54.460895+00:00', '--job-id', '97', '--raw', '--subdir', 'DAGS_FOLDER/transform_fact_user.py', '--cfg-path', '/tmp/tmpubj8qcuv']
+[2023-03-25T14:46:08.323+0000] {standard_task_runner.py:83} INFO - Job 97: Subtask model.dbt_transform_postgres.fact_user_potential
+[2023-03-25T14:46:08.422+0000] {task_command.py:388} INFO - Running <TaskInstance: transform_fact_user.model.dbt_transform_postgres.fact_user_potential manual__2023-03-25T14:45:54.460895+00:00 [running]> on host 0aac1a38f752
+[2023-03-25T14:46:08.502+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=transform_fact_user
+AIRFLOW_CTX_TASK_ID=model.dbt_transform_postgres.fact_user_potential
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-25T14:45:54.460895+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-25T14:45:54.460895+00:00
+[2023-03-25T14:46:08.506+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-25T14:46:08.508+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /opt/***/dbt_transform_postgres && dbt run --models fact_user_potential']
+[2023-03-25T14:46:08.528+0000] {subprocess.py:86} INFO - Output:
+[2023-03-25T14:46:10.490+0000] {subprocess.py:93} INFO - [0m14:46:10  Running with dbt=1.4.5
+[2023-03-25T14:46:11.146+0000] {subprocess.py:93} INFO - [0m14:46:11  Found 3 models, 7 tests, 0 snapshots, 0 analyses, 403 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+[2023-03-25T14:46:11.163+0000] {subprocess.py:93} INFO - [0m14:46:11
+[2023-03-25T14:46:13.820+0000] {subprocess.py:93} INFO - [0m14:46:13  Concurrency: 1 threads (target='dev')
+[2023-03-25T14:46:13.822+0000] {subprocess.py:93} INFO - [0m14:46:13
+[2023-03-25T14:46:13.837+0000] {subprocess.py:93} INFO - [0m14:46:13  1 of 1 START sql table model public.fact_user_potential ........................ [RUN]
+[2023-03-25T14:46:15.043+0000] {subprocess.py:93} INFO - [0m14:46:15  1 of 1 OK created sql table model public.fact_user_potential ................... [[32mSELECT 3[0m in 1.20s]
+[2023-03-25T14:46:15.570+0000] {subprocess.py:93} INFO - [0m14:46:15
+[2023-03-25T14:46:15.573+0000] {subprocess.py:93} INFO - [0m14:46:15  Finished running 1 table model in 0 hours 0 minutes and 4.40 seconds (4.40s).
+[2023-03-25T14:46:15.635+0000] {subprocess.py:93} INFO - [0m14:46:15
+[2023-03-25T14:46:15.638+0000] {subprocess.py:93} INFO - [0m14:46:15  [32mCompleted successfully[0m
+[2023-03-25T14:46:15.643+0000] {subprocess.py:93} INFO - [0m14:46:15
+[2023-03-25T14:46:15.650+0000] {subprocess.py:93} INFO - [0m14:46:15  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[2023-03-25T14:46:17.785+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-03-25T14:46:17.911+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=transform_fact_user, task_id=model.dbt_transform_postgres.fact_user_potential, execution_date=20230325T144554, start_date=20230325T144608, end_date=20230325T144617
+[2023-03-25T14:46:17.989+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-25T14:46:18.026+0000] {taskinstance.py:2578} INFO - 5 downstream tasks scheduled from follow-on schedule check

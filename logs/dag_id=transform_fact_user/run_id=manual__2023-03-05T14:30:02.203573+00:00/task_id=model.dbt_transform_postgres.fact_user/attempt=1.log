@@ -1,0 +1,34 @@
+[2023-03-05T14:30:03.305+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: transform_fact_user.model.dbt_transform_postgres.fact_user manual__2023-03-05T14:30:02.203573+00:00 [queued]>
+[2023-03-05T14:30:03.313+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: transform_fact_user.model.dbt_transform_postgres.fact_user manual__2023-03-05T14:30:02.203573+00:00 [queued]>
+[2023-03-05T14:30:03.314+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-05T14:30:03.316+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-03-05T14:30:03.317+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-05T14:30:03.327+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): model.dbt_transform_postgres.fact_user> on 2023-03-05 14:30:02.203573+00:00
+[2023-03-05T14:30:03.333+0000] {standard_task_runner.py:55} INFO - Started process 348 to run task
+[2023-03-05T14:30:03.337+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'transform_fact_user', 'model.dbt_transform_postgres.fact_user', 'manual__2023-03-05T14:30:02.203573+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/transform_fact_user.py', '--cfg-path', '/tmp/tmpd1tqfes2']
+[2023-03-05T14:30:03.338+0000] {standard_task_runner.py:83} INFO - Job 53: Subtask model.dbt_transform_postgres.fact_user
+[2023-03-05T14:30:03.411+0000] {task_command.py:388} INFO - Running <TaskInstance: transform_fact_user.model.dbt_transform_postgres.fact_user manual__2023-03-05T14:30:02.203573+00:00 [running]> on host 02e1ac09fd08
+[2023-03-05T14:30:03.462+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=transform_fact_user
+AIRFLOW_CTX_TASK_ID=model.dbt_transform_postgres.fact_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-05T14:30:02.203573+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-05T14:30:02.203573+00:00
+[2023-03-05T14:30:03.464+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-03-05T14:30:03.466+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd ./dbt_transform_postgres && dbt run --models fact_user']
+[2023-03-05T14:30:03.479+0000] {subprocess.py:86} INFO - Output:
+[2023-03-05T14:30:03.491+0000] {subprocess.py:93} INFO - /bin/bash: line 1: cd: ./dbt_transform_postgres: No such file or directory
+[2023-03-05T14:30:03.492+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-03-05T14:30:03.504+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-03-05T14:30:03.509+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=transform_fact_user, task_id=model.dbt_transform_postgres.fact_user, execution_date=20230305T143002, start_date=20230305T143003, end_date=20230305T143003
+[2023-03-05T14:30:03.519+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 53 for task model.dbt_transform_postgres.fact_user (Bash command failed. The command returned a non-zero exit code 1.; 348)
+[2023-03-05T14:30:03.549+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-03-05T14:30:03.572+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
