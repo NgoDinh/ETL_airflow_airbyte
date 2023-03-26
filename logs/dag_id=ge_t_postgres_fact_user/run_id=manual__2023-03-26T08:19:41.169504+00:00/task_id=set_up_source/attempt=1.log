@@ -1,0 +1,84 @@
+[2023-03-26T08:19:43.986+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ge_t_postgres_fact_user.set_up_source manual__2023-03-26T08:19:41.169504+00:00 [queued]>
+[2023-03-26T08:19:43.997+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ge_t_postgres_fact_user.set_up_source manual__2023-03-26T08:19:41.169504+00:00 [queued]>
+[2023-03-26T08:19:43.999+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-26T08:19:44.000+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-03-26T08:19:44.001+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-26T08:19:44.012+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): set_up_source> on 2023-03-26 08:19:41.169504+00:00
+[2023-03-26T08:19:44.022+0000] {standard_task_runner.py:55} INFO - Started process 3759 to run task
+[2023-03-26T08:19:44.026+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ge_t_postgres_fact_user', 'set_up_source', 'manual__2023-03-26T08:19:41.169504+00:00', '--job-id', '126', '--raw', '--subdir', 'DAGS_FOLDER/ge_t_postgres_fact_user.py', '--cfg-path', '/tmp/tmpkeeova4s']
+[2023-03-26T08:19:44.028+0000] {standard_task_runner.py:83} INFO - Job 126: Subtask set_up_source
+[2023-03-26T08:19:44.097+0000] {task_command.py:388} INFO - Running <TaskInstance: ge_t_postgres_fact_user.set_up_source manual__2023-03-26T08:19:41.169504+00:00 [running]> on host 79c6630d655a
+[2023-03-26T08:19:44.151+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ge_t_postgres_fact_user
+AIRFLOW_CTX_TASK_ID=set_up_source
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-26T08:19:41.169504+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-26T08:19:41.169504+00:00
+[2023-03-26T08:19:44.155+0000] {util.py:1938} INFO - Could not find local context root directory
+[2023-03-26T08:19:44.158+0000] {base.py:2129} INFO - Created temporary directory '/tmp/tmp86p1yyan' for ephemeral docs site
+[2023-03-26T08:19:44.160+0000] {abstract_data_context.py:5425} INFO - EphemeralDataContext has not implemented `_load_fluent_config()` returning empty `GxConfig`
+[2023-03-26T08:19:44.162+0000] {config.py:91} INFO - Loading 'datasources' ->
+{}
+[2023-03-26T08:19:44.163+0000] {config.py:149} INFO - Loaded 'datasources' ->
+{}
+[2023-03-26T08:19:44.195+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ge_t_postgres_fact_user.py", line 51, in set_up_source
+    print(context.test_yaml_config(yaml_config=example_yaml))
+  File "/home/airflow/.local/lib/python3.7/site-packages/great_expectations/data_context/data_context/abstract_data_context.py", line 4989, in test_yaml_config
+    shorten_tracebacks=shorten_tracebacks,
+  File "/home/airflow/.local/lib/python3.7/site-packages/great_expectations/data_context/config_validator/yaml_config_validator.py", line 190, in test_yaml_config
+    yaml_config=yaml_config, usage_stats_event_name=usage_stats_event_name
+  File "/home/airflow/.local/lib/python3.7/site-packages/great_expectations/data_context/config_validator/yaml_config_validator.py", line 307, in _test_yaml_config_prepare_config
+    usage_stats_event_name=usage_stats_event_name,
+  File "/home/airflow/.local/lib/python3.7/site-packages/great_expectations/data_context/config_validator/yaml_config_validator.py", line 374, in _load_config_string_as_commented_map
+    raise e
+  File "/home/airflow/.local/lib/python3.7/site-packages/great_expectations/data_context/config_validator/yaml_config_validator.py", line 361, in _load_config_string_as_commented_map
+    substituted_config: CommentedMap = yaml.load(config_str)
+  File "/home/airflow/.local/lib/python3.7/site-packages/ruamel/yaml/main.py", line 434, in load
+    return constructor.get_single_data()
+  File "/home/airflow/.local/lib/python3.7/site-packages/ruamel/yaml/constructor.py", line 121, in get_single_data
+    return self.construct_document(node)
+  File "/home/airflow/.local/lib/python3.7/site-packages/ruamel/yaml/constructor.py", line 131, in construct_document
+    for _dummy in generator:
+  File "/home/airflow/.local/lib/python3.7/site-packages/ruamel/yaml/constructor.py", line 1569, in construct_yaml_map
+    self.construct_mapping(node, data, deep=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/ruamel/yaml/constructor.py", line 1453, in construct_mapping
+    if self.check_mapping_key(node, key_node, maptyp, key, value):
+  File "/home/airflow/.local/lib/python3.7/site-packages/ruamel/yaml/constructor.py", line 294, in check_mapping_key
+    raise DuplicateKeyError(*args)
+ruamel.yaml.constructor.DuplicateKeyError: while constructing a mapping
+  in "<unicode string>", line 2, column 5:
+        name: postgres_aws_v1
+        ^ (line: 2)
+found duplicate key "class_name" with value "SqlAlchemyExecutionEngine" (original value: "Datasource")
+  in "<unicode string>", line 5, column 5:
+        class_name: SqlAlchemyExecutionE ... 
+        ^ (line: 5)
+
+To suppress this check see:
+    http://yaml.readthedocs.io/en/latest/api.html#duplicate-keys
+
+[2023-03-26T08:19:44.212+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=ge_t_postgres_fact_user, task_id=set_up_source, execution_date=20230326T081941, start_date=20230326T081943, end_date=20230326T081944
+[2023-03-26T08:19:44.232+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 126 for task set_up_source (while constructing a mapping
+  in "<unicode string>", line 2, column 5:
+        name: postgres_aws_v1
+        ^ (line: 2)
+found duplicate key "class_name" with value "SqlAlchemyExecutionEngine" (original value: "Datasource")
+  in "<unicode string>", line 5, column 5:
+        class_name: SqlAlchemyExecutionE ... 
+        ^ (line: 5)
+
+To suppress this check see:
+    http://yaml.readthedocs.io/en/latest/api.html#duplicate-keys
+; 3759)
+[2023-03-26T08:19:44.280+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-03-26T08:19:44.296+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,32 @@
+[2023-03-26T09:42:05.814+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ge_t_postgres_fact_user.set_up_source manual__2023-03-26T09:42:03.320353+00:00 [queued]>
+[2023-03-26T09:42:05.821+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: ge_t_postgres_fact_user.set_up_source manual__2023-03-26T09:42:03.320353+00:00 [queued]>
+[2023-03-26T09:42:05.822+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-26T09:42:05.823+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-03-26T09:42:05.825+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-26T09:42:05.835+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): set_up_source> on 2023-03-26 09:42:03.320353+00:00
+[2023-03-26T09:42:05.843+0000] {standard_task_runner.py:55} INFO - Started process 2095 to run task
+[2023-03-26T09:42:05.848+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'ge_t_postgres_fact_user', 'set_up_source', 'manual__2023-03-26T09:42:03.320353+00:00', '--job-id', '143', '--raw', '--subdir', 'DAGS_FOLDER/ge_t_postgres_fact_user.py', '--cfg-path', '/tmp/tmp_qrs1c4o']
+[2023-03-26T09:42:05.850+0000] {standard_task_runner.py:83} INFO - Job 143: Subtask set_up_source
+[2023-03-26T09:42:05.943+0000] {task_command.py:388} INFO - Running <TaskInstance: ge_t_postgres_fact_user.set_up_source manual__2023-03-26T09:42:03.320353+00:00 [running]> on host 07b54bb2b8de
+[2023-03-26T09:42:05.999+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ge_t_postgres_fact_user
+AIRFLOW_CTX_TASK_ID=set_up_source
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-26T09:42:03.320353+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-26T09:42:03.320353+00:00
+[2023-03-26T09:42:06.002+0000] {util.py:1938} INFO - Could not find local context root directory
+[2023-03-26T09:42:06.004+0000] {base.py:2129} INFO - Created temporary directory '/tmp/tmpqijo4m1x' for ephemeral docs site
+[2023-03-26T09:42:06.007+0000] {abstract_data_context.py:5425} INFO - EphemeralDataContext has not implemented `_load_fluent_config()` returning empty `GxConfig`
+[2023-03-26T09:42:06.008+0000] {config.py:91} INFO - Loading 'datasources' ->
+{}
+[2023-03-26T09:42:06.009+0000] {config.py:149} INFO - Loaded 'datasources' ->
+{}
+[2023-03-26T09:42:07.008+0000] {logging_mixin.py:137} INFO - [{'name': 'postgres_aws', 'execution_engine': {'class_name': 'SqlAlchemyExecutionEngine', 'credentials': {'host': '13.229.110.215', 'port': '5432', 'username': 'vu_ngo', 'password': 1993, 'database': 'vu_ngo', 'drivername': 'postgresql'}, 'module_name': 'great_expectations.execution_engine'}, 'class_name': 'Datasource', 'module_name': 'great_expectations.datasource', 'data_connectors': {'default_runtime_data_connector_name': {'batch_identifiers': ['default_identifier_name'], 'class_name': 'RuntimeDataConnector', 'module_name': 'great_expectations.datasource.data_connector'}, 'default_inferred_data_connector_name': {'class_name': 'InferredAssetSqlDataConnector', 'introspection_directives': {'schema_name': 'public'}, 'include_schema_name': True, 'module_name': 'great_expectations.datasource.data_connector'}, 'default_configured_data_connector_name': {'class_name': 'ConfiguredAssetSqlDataConnector', 'module_name': 'great_expectations.datasource.data_connector', 'assets': {'fact_user': {'schema_name': 'public', 'class_name': 'Asset', 'module_name': 'great_expectations.datasource.data_connector.asset'}}}}}]
+[2023-03-26T09:42:07.010+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-26T09:42:07.023+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=ge_t_postgres_fact_user, task_id=set_up_source, execution_date=20230326T094203, start_date=20230326T094205, end_date=20230326T094207
+[2023-03-26T09:42:07.050+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-26T09:42:07.071+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
