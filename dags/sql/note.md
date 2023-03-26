@@ -1,0 +1,1 @@
+# This folder using to test/contain sql script that help try how to use airflow with a database server (ex:postgres)
