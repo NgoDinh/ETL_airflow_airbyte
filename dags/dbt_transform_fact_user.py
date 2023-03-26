@@ -17,7 +17,7 @@ with open(manifest_path) as f: # Open manifest.json
 
 # Build an Airflow DAG
 with DAG(
-  dag_id="transform_fact_user", # The name that shows up in the UI
+  dag_id="dbt_transform_fact_user", # The name that shows up in the UI
   start_date=pendulum.today(), # Start date of the DAG
   catchup=False,
 ) as dag:
@@ -42,10 +42,11 @@ with DAG(
 
   # Define relationships between Operators
   for node_id, node_info in nodes.items():
-    upstream_nodes = node_info["depends_on"]["nodes"]
-    if upstream_nodes:
-        for upstream_node in upstream_nodes:
-            dbt_tasks[upstream_node] >> dbt_tasks[node_id]
+    if node_info["name"] in ('fact_user', 'fact_user_potential'):
+      upstream_nodes = node_info["depends_on"]["nodes"]
+      if upstream_nodes:
+          for upstream_node in upstream_nodes:
+              dbt_tasks[upstream_node] >> dbt_tasks[node_id]
 
 if __name__ == "__main__":
   dag.cli()
